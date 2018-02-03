@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{%block content%}
+<div class="container">
+<div class="col-xs-12  ">
+	<a href="add">Want to add more tasks??</a>
+	<div class="jumbotron">
+		<ol type="1">
+{% for obj in query %}
+	<h3><li>{{obj.title}}</li></h3>
+<h6 style="color:red">{{obj.description}}</h6>
+{%endfor%}
+</ol>
+<br><br><h3>Total Task : {{no}} </h3>
+</div>
+</div> 
+</div>
+	
+
+
+{%endblock%}
